@@ -10,7 +10,7 @@ pipeline {
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-	   git 'https://github.com/Dineshdevop1/star-agile-health-care.git'
+	   git 'https://github.com/AlaRanga4/star-agile-health-care.git'
             }
     }
    
@@ -29,7 +29,7 @@ pipeline {
 
 	stage('Image creation') {
       steps {
-        sh 'docker build -t dineshk1996/healthcare:latest .'
+        sh 'docker build -t alaranga4/healthcare:latest .'
                     }
             }
 	    
@@ -41,13 +41,13 @@ pipeline {
 			}
 	stage('Docker Push') 
         { steps {
-            sh "docker push dineshk1996/healthcare:latest "
+            sh "docker push alaranga4/healthcare:latest "
         }}
 	   
 	stage ('Configure Test-server with Terraform'){
       steps {
         dir('serverfiles'){
-        sh 'sudo chmod 600 project.pem'
+        sh 'sudo chmod 600 ranga5.pem'
         sh 'terraform init'
         sh 'terraform validate'
         sh 'terraform apply --auto-approve'
