@@ -47,7 +47,7 @@ pipeline {
 	stage ('Configure Test-server with Terraform'){
       steps {
         dir('serverfiles'){
-        sh 'sudo chmod 600 ranga5.pem'
+        sh 'sudo chmod 600 dream.pem'
         sh 'terraform init'
         sh 'terraform validate'
         sh 'terraform apply --auto-approve'
