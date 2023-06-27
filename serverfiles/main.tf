@@ -1,7 +1,7 @@
 resource "aws_instance" "test-server" {
   ami           = "ami-0d52744d6551d851e" 
   instance_type = "t2.medium" 
-  key_name = "ranga5"
+  key_name = "dream"
   vpc_security_group_ids= ["sg-03164d9b2b749017f"]
   connection {
     type     = "ssh"
